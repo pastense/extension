@@ -1,0 +1,39 @@
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts
+dist/
+build/
+out/
+coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example  # keep a sample config if you have one
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# Chrome Extension packaging
+*.crx
+*.pem
+*.zip
+
+# Temporary / cache files
+*.log
+.cache/
+.tmp/

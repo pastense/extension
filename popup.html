@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Clara Search</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --border: #e0e0e0;
+      --accent: #4a8cff;
+      --text: #222;
+    }
+
+    body {
+      width: 400px;
+      height: 500px;                /* gives it a taller, app-like feel */
+      margin: 0;
+      padding: 16px;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background: #f6f7f9;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 10px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    input[type="text"] {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      padding: 6px;
+      outline: none;
+      color: var(--text);
+    }
+
+    input[type="text"]::placeholder {
+      color: #999;
+    }
+
+    #results {
+      margin-top: 14px;
+      overflow-y: auto;
+      flex-grow: 1;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #444;
+    }
+
+    /* Optional scrollbar styling */
+    #results::-webkit-scrollbar {
+      width: 6px;
+    }
+    #results::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    .result-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0; /* subtle separation */
+}
+
+  .result-row:last-child {
+    border-bottom: none;
+  }
+
+  .result-link {
+    flex: 1;
+  min-width: 0;                /* REQUIRED for ellipsis in flexbox */
+  text-decoration: none;
+  color: #1a73e8;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;              /* safer than inline for overflow clipping */
+  max-width: 250px; 
+  }
+ .url-favicon {
+  width: 20px;          /* increased size */
+  height: 20px;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+ }
+
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search your memory...">
+  </div>
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
