@@ -1,5 +1,5 @@
 # Browser Extension
-This is the data capture module that helps extract important meta data and contents from a web page.
+This is the data capture module that helps extract important metadata and content from a web page.
 
 ## Architecture
 Browser Extension → Local FastAPI → Local Vector Store (SQLite / FAISS)
